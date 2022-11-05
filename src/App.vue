@@ -5,7 +5,6 @@
   <Hello name="Sontaya" />
 </template>
 
-
 <style>
 html {
   background: #222;
