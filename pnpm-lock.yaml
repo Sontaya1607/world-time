@@ -7,6 +7,7 @@ specifiers:
   '@unocss/reset': ^0.46.3
   '@vitejs/plugin-vue': ^3.1.2
   '@vue/tsconfig': ^0.1.3
+  '@vueuse/core': ^9.4.0
   eslint: ^8.26.0
   fuse.js: ^6.6.2
   npm-run-all: ^4.1.5
@@ -31,11 +32,12 @@ devDependencies:
   '@unocss/reset': 0.46.3
   '@vitejs/plugin-vue': 3.2.0_vite@3.2.2+vue@3.2.41
   '@vue/tsconfig': 0.1.3_@types+node@16.18.3
+  '@vueuse/core': 9.4.0_vue@3.2.41
   eslint: 8.26.0
   npm-run-all: 4.1.5
   typescript: 4.7.4
   unocss: 0.46.3_vite@3.2.2
-  unplugin-auto-import: 0.11.4
+  unplugin-auto-import: 0.11.4_@vueuse+core@9.4.0
   unplugin-vue-components: 0.22.9_vue@3.2.41
   vite: 3.2.2
   vue-tsc: 1.0.9_typescript@4.7.4
@@ -368,6 +370,10 @@ packages:
 
   /@types/unist/2.0.6:
     resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
+    dev: true
+
+  /@types/web-bluetooth/0.0.16:
+    resolution: {integrity: sha512-oh8q2Zc32S6gd/j50GowEjKLoOVOwHP/bWVjKJInBwQqdOYMdPrf1oVlelTlyfFK3CKxL1uahMDAr+vy8T7yMQ==}
     dev: true
 
   /@typescript-eslint/eslint-plugin/5.42.0_rnqigvs2sy7hjbduhyswa7hitq:
@@ -791,6 +797,31 @@ packages:
         optional: true
     dependencies:
       '@types/node': 16.18.3
+    dev: true
+
+  /@vueuse/core/9.4.0_vue@3.2.41:
+    resolution: {integrity: sha512-JzgenGj1ZF2BHOen5rsFiAyyI9sXAv7aKhNLlm9b7SwYQeKTcxTWdhudonURCSP3Egl9NQaRBzes2lv/1JUt/Q==}
+    dependencies:
+      '@types/web-bluetooth': 0.0.16
+      '@vueuse/metadata': 9.4.0
+      '@vueuse/shared': 9.4.0_vue@3.2.41
+      vue-demi: 0.13.11_vue@3.2.41
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: true
+
+  /@vueuse/metadata/9.4.0:
+    resolution: {integrity: sha512-7GKMdGAsJyQJl35MYOz/RDpP0FxuiZBRDSN79QIPbdqYx4Sd0sVTnIC68KJ6Oln0t0SouvSUMvRHuno216Ud2Q==}
+    dev: true
+
+  /@vueuse/shared/9.4.0_vue@3.2.41:
+    resolution: {integrity: sha512-fTuem51KwMCnqUKkI8B57qAIMcFovtGgsCtAeqxIzH3i6nE9VYge+gVfneNHAAy7lj8twbkNfqQSygOPJTm4tQ==}
+    dependencies:
+      vue-demi: 0.13.11_vue@3.2.41
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
     dev: true
 
   /acorn-jsx/5.3.2_acorn@8.8.1:
@@ -3253,7 +3284,7 @@ packages:
       - vite
     dev: true
 
-  /unplugin-auto-import/0.11.4:
+  /unplugin-auto-import/0.11.4_@vueuse+core@9.4.0:
     resolution: {integrity: sha512-lh/bRDRYwgnb9Cm5ur8TlTMGxA1GRZvgzCvBIf0vyuVRy7ebWcWefFElpUDpr8vLl+ZRGsPVCOGiYJ8TCR625Q==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -3264,6 +3295,7 @@ packages:
     dependencies:
       '@antfu/utils': 0.6.2
       '@rollup/pluginutils': 5.0.2
+      '@vueuse/core': 9.4.0_vue@3.2.41
       local-pkg: 0.4.2
       magic-string: 0.26.7
       unimport: 0.7.0
@@ -3352,6 +3384,21 @@ packages:
       rollup: 2.79.1
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
+
+  /vue-demi/0.13.11_vue@3.2.41:
+    resolution: {integrity: sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: 3.2.41
     dev: true
 
   /vue-eslint-parser/9.1.0_eslint@8.26.0:
