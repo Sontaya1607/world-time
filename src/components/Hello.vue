@@ -7,5 +7,6 @@
 </script>
 
 <template>
-  <div>Hello, {{ uppercase }}</div>
+  <div text="red 3xl" font="sans">Hello, {{ uppercase }}</div>
+  <div i-carbon-brightness-contrast text-5xl text-yellow></div>
 </template>
