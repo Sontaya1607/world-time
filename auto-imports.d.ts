@@ -267,6 +267,7 @@ declare global {
   const watchTriggerable: typeof import('@vueuse/core')['watchTriggerable']
   const watchWithFilter: typeof import('@vueuse/core')['watchWithFilter']
   const whenever: typeof import('@vueuse/core')['whenever']
+  const zoneNames: typeof import('./src/composables/state')['zoneNames']
   const zones: typeof import('./src/composables/state')['zones']
 }
 // for vue template auto import
@@ -539,6 +540,7 @@ declare module 'vue' {
     readonly watchTriggerable: UnwrapRef<typeof import('@vueuse/core')['watchTriggerable']>
     readonly watchWithFilter: UnwrapRef<typeof import('@vueuse/core')['watchWithFilter']>
     readonly whenever: UnwrapRef<typeof import('@vueuse/core')['whenever']>
+    readonly zoneNames: UnwrapRef<typeof import('./src/composables/state')['zoneNames']>
     readonly zones: UnwrapRef<typeof import('./src/composables/state')['zones']>
   }
 }
